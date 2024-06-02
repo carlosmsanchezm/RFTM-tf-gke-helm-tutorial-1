@@ -55,7 +55,7 @@ resource "google_container_cluster" "primary" {
   initial_node_count       = 1
   depends_on = [google_project_service.required_apis]
   network            = google_compute_network.vpc_network.name
-
+  deletion_protection = false
   
 }
 
