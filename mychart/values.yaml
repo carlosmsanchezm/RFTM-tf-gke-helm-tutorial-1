@@ -2,7 +2,7 @@ frontend:
   replicaCount: 3
   image:
     repository: gcr.io/molten-enigma-425106-p0/tutorial-1
-    tag: latest
+    tag: v1
   resources:
     requests:
       cpu: 100m
