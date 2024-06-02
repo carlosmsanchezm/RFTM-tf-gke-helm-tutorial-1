@@ -1,19 +1,22 @@
 frontend:
   replicaCount: 3
   image:
-    repository: gcr.io/molten-enigma-425106-p0/tutorial-1
-    tag: v1
+    repository: gcr.io/<your-gcp-project-id>/tutorial-1
+    tag: v4
   resources:
     requests:
       cpu: 100m
       memory: 100Mi
+  env:
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
 
 redis:
   master:
     replicaCount: 1
     image:
-      repository: redis
-      tag: 6.2.6
+      repository: k8s.gcr.io/redis
+      tag: e2e
   slave:
     replicaCount: 2
     image:

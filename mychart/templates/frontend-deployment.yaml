@@ -17,7 +17,7 @@ spec:
         tier: frontend
     spec:
       containers:
-      - name: web
+      - name: php-redis
         image: {{ .Values.frontend.image.repository }}:{{ .Values.frontend.image.tag }}
         resources:
           requests:
@@ -25,8 +25,8 @@ spec:
             memory: {{ .Values.frontend.resources.requests.memory }}
         env:
         - name: REDIS_HOST
-          value: "redis-master"
+          value: {{ .Values.frontend.env.REDIS_HOST }}
         - name: REDIS_PORT
-          value: "6379"
+          value: {{ .Values.frontend.env.REDIS_PORT }}
         ports:
         - containerPort: 8888
