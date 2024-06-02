@@ -1,0 +1,25 @@
+frontend:
+  replicaCount: 3
+  image:
+    repository: gcr.io/google-samples/gb-frontend
+    tag: v4
+  resources:
+    requests:
+      cpu: 100m
+      memory: 100Mi
+
+redis:
+  master:
+    replicaCount: 1
+    image:
+      repository: k8s.gcr.io/redis
+      tag: e2e
+  slave:
+    replicaCount: 2
+    image:
+      repository: gcr.io/google_samples/gb-redisslave
+      tag: v3
+  resources:
+    requests:
+      cpu: 100m
+      memory: 100Mi
