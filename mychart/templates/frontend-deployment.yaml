@@ -17,16 +17,16 @@ spec:
         tier: frontend
     spec:
       containers:
-      - name: php-redis
-        image: {{ .Values.frontend.image.repository }}:{{ .Values.frontend.image.tag }}
+      - name: web
+        image: "{{ .Values.frontend.image.repository }}:{{ .Values.frontend.image.tag }}"
         resources:
           requests:
             cpu: {{ .Values.frontend.resources.requests.cpu }}
             memory: {{ .Values.frontend.resources.requests.memory }}
         env:
         - name: REDIS_HOST
-          value: {{ .Values.frontend.env.REDIS_HOST }}
+          value: "{{ .Values.frontend.env.REDIS_HOST }}"
         - name: REDIS_PORT
-          value: {{ .Values.frontend.env.REDIS_PORT }}
+          value: "{{ .Values.frontend.env.REDIS_PORT }}"
         ports:
         - containerPort: 8888
