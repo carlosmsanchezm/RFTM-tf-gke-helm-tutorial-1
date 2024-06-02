@@ -2,9 +2,33 @@
 
 # Deploying N-Tier on GKS using Terraform and Helm.
 
+## Project Review
+
+### What We Learn from This Repository
+
+This repository serves as a comprehensive demonstration of deploying a multi-tier application on Google Cloud Platform (GCP) using Kubernetes and Terraform. By following the steps and utilizing the provided files, users will gain hands-on experience with several advanced DevOps and cloud management techniques. Here’s a breakdown of the key skills and concepts showcased in this project:
+
+1. **Infrastructure as Code with Terraform**
+2. **Container Orchestration with Kubernetes**
+3. **Google Kubernetes Engine (GKE)**
+4. **Application Deployment**
+5. **Continuous Integration and Deployment (CI/CD)**
+
+
+### Why This Project Is Important
+
+- **End-to-End Solution**
+- **Modern DevOps Practices**
+- **Scalability and Reliability**
+- **Hands-On Experience**
 ### Application Architecture Overview
 
 In this project, we are deploying an N-tier application using Kubernetes, managed through Helm charts on Google Kubernetes Engine (GKE). The application is a Flask-based web guestbook, which serves as a practical example of deploying a multi-tier application with multiple front-end and back-end instances and load-balanced traffic between them.
+
+### Diagram
+
+![Diagram of Kubernetes Architecture](images/k8s-tf-gks-2024-06-02-172608.png)
+
 
 ### Architecture Components
 
@@ -31,10 +55,6 @@ In this project, we are deploying an N-tier application using Kubernetes, manage
 3. Internal ClusterIP services manage communication between the Flask application and Redis instances.
 4. Redis Master handles write operations and synchronizes data with Redis Slaves.
 5. Redis Slaves handle read operations, improving scalability and performance.
-
-### Diagram
-
-![Diagram of Kubernetes Architecture](images/k8s-tf-gks-2024-06-02-172608.png)
 
 
 This guide will walk you through the steps to set up a GCP project, create a service account, configure Terraform, SSH into Google Cloud Shell, install Helm, authenticate with a service account, deploy a Helm chart, and access the application using the external IP of the load balancer.
@@ -261,3 +281,4 @@ provider "google" {
     
 
 By following these steps, you should be able to set up and deploy your application on GKE using Terraform and Helm, and access it via the external IP of the load balancer.
+
