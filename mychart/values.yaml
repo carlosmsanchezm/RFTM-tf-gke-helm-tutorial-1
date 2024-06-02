@@ -1,8 +1,8 @@
 frontend:
   replicaCount: 3
   image:
-    repository: gcr.io/google-samples/gb-frontend
-    tag: v4
+    repository: gcr.io/molten-enigma-425106-p0/tutorial-1
+    tag: latest
   resources:
     requests:
       cpu: 100m
@@ -12,8 +12,8 @@ redis:
   master:
     replicaCount: 1
     image:
-      repository: k8s.gcr.io/redis
-      tag: e2e
+      repository: redis
+      tag: 6.2.6
   slave:
     replicaCount: 2
     image:
