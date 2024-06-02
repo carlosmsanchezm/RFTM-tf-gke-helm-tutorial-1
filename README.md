@@ -215,11 +215,11 @@ provider "google" {
 
 ### 6. Deploy Helm Chart
 
-1. **Clone or navigate to your Helm chart directory:**
+1. **Clone Helm chart directory:**
     
     ```
-    git clone https://github.com/your-repo/your-helm-chart.git
-    cd your-helm-chart
+    git clone https://github.com/carlosmsanchezm/RFTM-tf-gke-helm-tutorial-1.git
+
     ```
     
 2. **Deploy the Helm chart:**
