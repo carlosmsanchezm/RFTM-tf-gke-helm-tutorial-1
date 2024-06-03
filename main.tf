@@ -26,7 +26,7 @@ resource "google_project_service" "required_apis" {
   ])
 
   service            = each.key
-  project            = "molten-enigma-425106-p0"
+  project            = "your-project-id"
   disable_on_destroy = false
 }
 
