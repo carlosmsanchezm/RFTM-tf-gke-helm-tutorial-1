@@ -66,6 +66,8 @@ This guide will walk you through the steps to set up a GCP project, create a ser
 - Helm installed locally or in Cloud Shell
 - A Google Cloud project set up
 - Service account with necessary permissions
+- VS Code Remote - SSH Extension
+
 
 ## Steps
 
