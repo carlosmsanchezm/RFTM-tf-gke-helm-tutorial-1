@@ -9,9 +9,9 @@ terraform {
 
 terraform {
   backend "gcs" {
-    bucket      = "tftest-gke-1"
-    prefix      = "tftest-gke-1/terraform.tfstate"
-    credentials = "molten-enigma-425106-p0-29c7f9006d4b.json"
+    bucket      = "your-unique-bucket-name"
+    prefix      = "terraform/state/file/prefix"
+    credentials = "terraform-key.json"
   }
 }
 
@@ -31,8 +31,8 @@ resource "google_project_service" "required_apis" {
 }
 
 provider "google" {
-  credentials = file("molten-enigma-425106-p0-29c7f9006d4b.json")
-  project     = "molten-enigma-425106-p0"
+  credentials = file("path/to/your/terraform-key.json")
+  project     = "your-project-id"
   region      = "us-central1"
   zone        = "us-central1-c"
 }
